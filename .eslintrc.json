@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "env": {
+    "amd": true,
+    "browser": true,
+    "mocha": true,
+    "es6": true,
+    "jasmine": true,
+    "node": true
+  },
+  "globals": {
+    "assert": true,
+    "browser": true,
+    "expect": true,
+    "by": true,
+    "protractor": true,
+    "sinon": true,
+    "xdescribe": true,
+    "xit": true
+  },
+  "extends": ["loopback", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true, "trailingComma": "es5" }],
+    "max-len": [
+      "error",
+      100,
+      4,
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
+      }
+    ]
+  }
+}
